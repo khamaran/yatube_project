@@ -8,6 +8,7 @@ def index(request):
     return render(request, template) 
 
 # Страница, на которой будут посты, отфильтрованные по группам.
-def group_posts(request, slug):
-    return HttpResponse(f'На этой странице будут посты, отфильтрованные по группам {slug}.')
+def group_posts(request):
+    template = 'posts/group_list.html'
+    return render(request, template) 
 
